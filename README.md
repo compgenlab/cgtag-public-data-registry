@@ -32,3 +32,16 @@ config in a ` ```toml ` block. A submitted source **must declare a `checksum`**
 [issue-to-pr workflow](.github/workflows/issue-to-pr.yml) parses it, writes
 `sources/<name>@<version>.toml`, adds the `registry.toml` entry, and opens a PR closing
 the issue — a maintainer reviews and merges.
+
+## Setup (one-time, for maintainers)
+
+The issue-to-pr workflow opens its PR with the default `GITHUB_TOKEN`, which requires
+the repo setting **"Allow GitHub Actions to create and approve pull requests"** to be
+on. Without it the workflow fails with `GitHub Actions is not permitted to create or
+approve pull requests` (the branch is pushed but no PR is opened). Enable it once:
+
+- UI: **Settings → Actions → General → Workflow permissions** → check *Allow GitHub
+  Actions to create and approve pull requests* → **Save**, or
+- CLI: `gh api -X PUT repos/<owner>/<repo>/actions/permissions/workflow -F default_workflow_permissions=read -F can_approve_pull_request_reviews=true`
+
+(If the **organization** enforces this off, an org admin must allow it first.)
