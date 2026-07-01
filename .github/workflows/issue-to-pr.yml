@@ -46,7 +46,7 @@ jobs:
           anns = data.get("annotations", [])
           desc = anns[0].get("description", "") if anns else ""
 
-          rel = f"sources/{name}/{version}/{name}@{version}.toml"
+          rel = f"sources/{name}/{version}/{name}-{version}.toml"
           pathlib.Path("sources").mkdir(exist_ok=True)
           pathlib.Path(f"sources/{name}").mkdir(exist_ok=True)
           pathlib.Path(f"sources/{name}/{version}").mkdir(exist_ok=True)
