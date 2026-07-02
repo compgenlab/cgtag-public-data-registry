@@ -1,0 +1,25 @@
+[[sources]]
+  name = "CADD"
+  version = "1.7"
+  assembly = "GRCh38"
+  format = "tab"
+  ref_col = 3
+  alt_col = 4
+
+  [[sources.files]]
+    url = "https://krishna.gs.washington.edu/download/CADD/v1.7/GRCh38/whole_genome_SNVs.tsv.gz"
+    url_index = "https://krishna.gs.washington.edu/download/CADD/v1.7/GRCh38/whole_genome_SNVs.tsv.gz.tbi"
+    checksum = "md5:https://krishna.gs.washington.edu/download/CADD/v1.7/GRCh38/whole_genome_SNVs.tsv.gz.md5"
+    checksum_index = "md5:https://krishna.gs.washington.edu/download/CADD/v1.7/GRCh38/whole_genome_SNVs.tsv.gz.tbi.md5"
+
+  [[sources.files]]
+    url = "https://krishna.gs.washington.edu/download/CADD/v1.7/GRCh38/gnomad.genomes.r4.0.indel.tsv.gz"
+    url_index = "https://krishna.gs.washington.edu/download/CADD/v1.7/GRCh38/gnomad.genomes.r4.0.indel.tsv.gz.tbi"
+    checksum = "md5:https://krishna.gs.washington.edu/download/CADD/v1.7/GRCh38/gnomad.genomes.r4.0.indel.tsv.gz.md5"
+    checksum_index = "md5:https://krishna.gs.washington.edu/download/CADD/v1.7/GRCh38/gnomad.genomes.r4.0.indel.tsv.gz.tbi.md5"
+
+  [[sources.annotations]]
+    name = "CADD_PHRED"
+    field = "6"
+    type = "numeric"
+    description = "PHRED scaled CADD scores"

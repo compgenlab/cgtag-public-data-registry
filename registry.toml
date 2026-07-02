@@ -39,6 +39,13 @@ file        = "sources/ClinVar/20250202/ClinVar-20250202.toml"
 description = ""
 
 [[sources]]
+name        = "CADD"
+version     = "1.7"
+assembly    = "GRCh38"
+file        = "sources/CADD/1.7/CADD-1.7.toml"
+description = ""
+
+[[sources]]
 name        = "gnomAD"
 version     = "4.1.0"
 assembly    = "GRCh38"
