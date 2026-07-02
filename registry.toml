@@ -30,3 +30,10 @@ version     = "b157"
 assembly    = "GRCh38"
 file        = "sources/dbSNP/b157/dbSNP-b157.toml"
 description = ""
+
+[[sources]]
+name        = "ClinVar"
+version     = "20250202"
+assembly    = "GRCh38"
+file        = "sources/ClinVar/20250202/ClinVar-20250202.toml"
+description = ""
